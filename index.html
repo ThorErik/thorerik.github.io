@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Next-Gen VR Headset</title>
+    <title>Cardboard Vision Pro Max Ultra</title>
     <style>
         body {
             background-color: #121212;
@@ -18,27 +18,49 @@
             max-width: 800px;
             margin: auto;
             padding: 50px 20px;
+            position: relative;
+            z-index: 2;
         }
         h1 {
             font-size: 2.5em;
         }
         p {
             font-size: 1.2em;
-            opacity: 0.8;
+            opacity: 0.9;
         }
         .feature {
-            margin: 50px 0;
+            position: relative;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
             opacity: 0;
             transform: translateY(50px);
             transition: opacity 1s ease, transform 1s ease;
         }
-        .feature img {
-            width: 100%;
-            max-width: 500px;
+        .feature h2, .feature p {
+            position: relative;
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
             border-radius: 10px;
-            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
         }
+        .feature::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            filter: brightness(50%);
+            z-index: 1;
+        }
+        .feature#feature1::before { background-image: url('https://i.ibb.co/mCZV46SM/carboardvisionpromaxultraback.png'); }
+        .feature#feature2::before { background-image: url('https://i.ibb.co/ZpjH62Gx/carboardvisionpromaxultrafront.png'); }
+        .feature#feature3::before { background-image: url('https://i.ibb.co/KpFXVjpJ/carboardvisionpromaxultraside.png'); }
         .cta-button {
             background-color: #6200ea;
             color: #fff;
@@ -49,45 +71,39 @@
             cursor: pointer;
             margin-top: 20px;
             transition: 0.3s;
+            position: relative;
+            z-index: 2;
         }
         .cta-button:hover {
             background-color: #3700b3;
-        }
-        .section {
-            padding: 80px 20px;
-            text-align: center;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Next-Gen VR Headset</h1>
-        <p>Experience the future of virtual reality with cutting-edge cooling, ultra-light design, and immersive visuals.</p>
-        <img src="https://i.ibb.co/ZpjH62Gx/carboardvisionpromaxultrafront.png" alt="carboardvisionpromaxultrafront" class="product-image">
+        <h1>Cardboard Vision Pro Max Ultra</h1>
+        <p>Experience the future of virtual reality with an ultra-affordable, lightweight, and innovative design.</p>
     </div>
     
     <div class="section feature" id="feature1">
-        <h2>Futuristic Cooling System</h2>
-        <p>Stay immersed longer with our built-in cooling system that prevents overheating.</p>
-        <img src="thorerik.github.io/main/carboardvisionpromaxultrafront.png" alt="Cooling System2">
+        <div>
+            <h2>Revolutionary Back Design</h2>
+            <p>The ergonomic strap and lightweight material ensure comfort for extended use.</p>
+        </div>
     </div>
     
     <div class="section feature" id="feature2">
-        <h2>Ultra-Light Comfort</h2>
-        <p>Designed for extended wear, our headset is lightweight with adjustable padding.</p>
-        <img src="https://i.ibb.co/mCZV46SM/carboardvisionpromaxultraback.png" alt="carboardvisionpromaxultraback" border="0">
+        <div>
+            <h2>Immersive Front Display</h2>
+            <p>Designed for an ultra-wide field of view and enhanced VR immersion.</p>
+        </div>
     </div>
     
     <div class="section feature" id="feature3">
-        <h2>Immersive 8K Display</h2>
-        <p>Experience crystal-clear visuals with an advanced 8K ultra-wide display.</p>
-        <img src="8k_display.png" alt="8K Display">
-    </div>
-    
-    <div class="section feature" id="feature4">
-        <h2>Next-Level Tracking</h2>
-        <p>Advanced motion sensors provide precise tracking for a seamless VR experience.</p>
-        <img src="https://i.ibb.co/KpFXVjpJ/carboardvisionpromaxultraside.png" alt="carboardvisionpromaxultraside" border="0">
+        <div>
+            <h2>Sleek Side Profile</h2>
+            <p>Minimalist design with optimized weight distribution for a balanced experience.</p>
+        </div>
     </div>
     
     <div class="container">
